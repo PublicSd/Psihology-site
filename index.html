@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Оксана Капралова — психолог для подростков и взрослых</title>
+<meta name="description" content="Индивидуальные консультации психолога для подростков и взрослых. Очно и онлайн. Запись на консультацию.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#" class="logo">
+      <span class="logo__mark" aria-hidden="true">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 3C9.268 3 3 9.268 3 17c0 4.2 1.86 7.97 4.8 10.53.3-2.2 1.9-4.02 4.02-4.6C10.1 21.02 9.5 19.08 9.5 17c0-4.14 3.36-7.5 7.5-7.5s7.5 3.36 7.5 7.5c0 2.08-.6 4.02-2.32 5.93 2.12.58 3.72 2.4 4.02 4.6C29.14 24.97 31 21.2 31 17c0-7.732-6.268-14-14-14Z" stroke="#7FA6BE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="logo__text">Оксана Капралова<span class="logo__sub">психолог</span></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#about" class="nav__link" data-nav-link>Обо мне</a></li>
+        <li><a href="#services" class="nav__link" data-nav-link>Услуги</a></li>
+        <li><a href="#booking" class="nav__link" data-nav-link>Запись на консультацию</a></li>
+        <li><a href="#materials" class="nav__link" data-nav-link>Полезные материалы</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#booking" class="btn btn--primary btn--small">Записаться</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <p class="eyebrow">Психологическая помощь для подростков и взрослых</p>
+        <h1 class="hero__title">Пространство для разговора о том, что действительно важно</h1>
+        <p class="hero__subtitle">
+          Индивидуальные консультации очно и онлайн — для подростков от 10 лет
+          и взрослых. Разберём, что происходит на самом деле, найдём решение и обретём опору в себе.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#booking" class="btn btn--primary">Записаться на консультацию</a>
+          <a href="#about" class="btn btn--ghost">Как проходит встреча</a>
+        </div>
+
+        <ul class="trust-list">
+          <li class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5 3 4v4.2c0 4.1 2.6 6.9 6 8.3 3.4-1.4 6-4.2 6-8.3V4L9 1.5Z" stroke="#7FA6BE" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            Конфиденциально
+          </li>
+          <li class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2.5" y="3.5" width="13" height="12" rx="2" stroke="#7FA6BE" stroke-width="1.4"/><path d="M2.5 7h13M6 2v3M12 2v3" stroke="#7FA6BE" stroke-width="1.4" stroke-linecap="round"/></svg>
+            Очно и онлайн
+          </li>
+          <li class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5c-1 0-1.9-.3-2.7-.8L4 14l1-3.3C4.4 10 4 9.5 4 9Z" stroke="#7FA6BE" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            Первая встреча — знакомство и диагностика
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__breath reveal" aria-labelledby="breathTitle">
+        <div class="breath-card">
+          <p class="breath-card__eyebrow" id="breathTitle">Пока думаете</p>
+          <h2 class="breath-card__title">Просто подышим?</h2>
+
+          <div class="breath" id="breath">
+            <div class="breath__stage">
+              <div class="breath__square">
+                <div class="breath__dot" id="breathDot" aria-hidden="true"></div>
+                <div class="breath__center">
+                  <span class="breath__phase" id="breathPhase">Вдох</span>
+                  <span class="breath__timer" id="breathTimer">4</span>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn--outline btn--small" id="breathToggle" type="button" aria-pressed="false">
+              Начать
+            </button>
+          </div>
+          <p class="breath-card__caption">Квадратное дыхание помогает успокоиться за пару минут</p>
+        </div>
+      </div>
+    </div>
+
+    <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C280,90 480,10 760,40 C1040,70 1200,20 1440,50 L1440,100 L0,100 Z" style="fill: var(--color-bg);"/>
+    </svg>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__portrait reveal">
+        <div class="photo-frame">
+          <img src="images/oksana.jpg" alt="Оксана Капралова, психолог" width="900" height="1125" loading="lazy">
+        </div>
+      </div>
+
+      <div class="about__text reveal">
+        <p class="eyebrow">Обо мне</p>
+        <h2 class="section-title">Психолог, который работает и с подростками, и со взрослыми</h2>
+        <div class="content-placeholder">
+          <p>Текст «Обо мне» — добавим здесь после того, как обсудите детали с клиентом</p>
+        </div>
+
+        <ul class="fact-list">
+          <li><span>Образование</span>ФГБОУ ВО «НГПУ им. К. Минина», г. Нижний Новгород</li>
+          <li><span>Повышение квалификации</span>АНО «НИУДПО им. К. Д. Ушинского» — «Сказкотерапия в тренинговой работе. Технологии составления сказочных сюжетов и сочинения сказок» (108 часов); Каменный город — «Специальное и инклюзивное образование детей с ОВЗ в условиях реализации ФГОС»</li>
+          <li><span>Опыт работы</span>2 года</li>
+          <li><span>Подход</span>КПТ и арт-терапия</li>
+          <li><span>Формат</span>Очно в Нижнем Новгороде и онлайн по видеосвязи</li>
+        </ul>
+
+        <p class="tags-label">Темы, с которыми я работаю</p>
+        <div class="tag-row">
+          <span class="tag">психолог для подростков</span>
+          <span class="tag">психолог для родителей</span>
+          <span class="tag">подростковый кризис</span>
+          <span class="tag">тревожность</span>
+          <span class="tag">отношения детей и родителей</span>
+          <span class="tag">переходный возраст</span>
+          <span class="tag tag--extra" hidden>помощь подросткам</span>
+          <span class="tag tag--extra" hidden>помощь родителям</span>
+          <span class="tag tag--extra" hidden>консультация психолога</span>
+          <span class="tag tag--extra" hidden>воспитание детей</span>
+          <span class="tag tag--extra" hidden>снижение успеваемости</span>
+          <span class="tag tag--extra" hidden>депрессивность</span>
+          <span class="tag tag--extra" hidden>апатия</span>
+          <span class="tag tag--extra" hidden>конфликты с родителями</span>
+          <span class="tag tag--extra" hidden>травля в школе</span>
+          <span class="tag tag--extra" hidden>подростковая агрессия</span>
+          <span class="tag tag--extra" hidden>суицидальное поведение</span>
+          <span class="tag tag--extra" hidden>низкая учебная мотивация</span>
+          <span class="tag tag--extra" hidden>как разговаривать с подростком</span>
+          <span class="tag tag--extra" hidden>профориентация</span>
+        </div>
+        <button class="tags-toggle" id="tagsToggle" type="button" aria-expanded="false">
+          <span id="tagsToggleLabel">Показать все темы</span>
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,60 C320,10 620,90 900,50 C1180,10 1300,70 1440,40 L1440,100 L0,100 Z" style="fill: var(--color-bg-section);"/>
+    </svg>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Услуги</p>
+        <h2 class="section-title">С чем можно прийти на консультацию</h2>
+      </div>
+
+      <div class="services__grid">
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="9.5" stroke="#7FA6BE" stroke-width="1.6"/><path d="M13 8v5l3.2 2" stroke="#7FA6BE" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Консультация для взрослых</h3>
+          <p class="service-card__meta">1 час · очно или онлайн</p>
+          <p class="service-card__text">Тревога, отношения, выгорание, кризисы и просто желание разобраться в себе.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3c-3 0-5 2.3-5 5.2 0 2 .9 3.4 2 4.5-2.6.9-4.6 3-5 5.8h16c-.4-2.8-2.4-4.9-5-5.8 1.1-1.1 2-2.5 2-4.5C18 5.3 16 3 13 3Z" stroke="#7FA6BE" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Консультация для подростков</h3>
+          <p class="service-card__meta">1 час · 10–17 лет</p>
+          <p class="service-card__text">Разговор один на один, в своём темпе, без оценивания и нотаций.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="9" cy="9" r="3.4" stroke="#7FA6BE" stroke-width="1.6"/><circle cx="18" cy="10.5" r="2.6" stroke="#7FA6BE" stroke-width="1.6"/><path d="M3.5 21c.6-3.4 3-5.4 6-5.4 2 0 3.7.9 4.8 2.3M14.4 20c.4-2.3 2-3.8 4-3.8 1.8 0 3.2 1.1 3.9 2.8" stroke="#7FA6BE" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Встреча с родителем</h3>
+          <p class="service-card__meta">1 час · отдельно от подростка</p>
+          <p class="service-card__text">Как поддержать подростка, не разрушив доверие между вами.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3.5" y="6" width="19" height="13" rx="2" stroke="#7FA6BE" stroke-width="1.6"/><path d="M8 6V4.5M18 6V4.5" stroke="#7FA6BE" stroke-width="1.6" stroke-linecap="round"/><path d="M9 13.5 12 16l5-5" stroke="#7FA6BE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Онлайн-формат</h3>
+          <p class="service-card__meta">1 час · по видеосвязи</p>
+          <p class="service-card__text">Для тех, кому удобнее из дома, или кто живёт в другом городе.</p>
+        </article>
+      </div>
+
+    </div>
+
+    <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C260,0 520,90 800,55 C1080,20 1220,70 1440,35 L1440,100 L0,100 Z" style="fill: var(--color-blue-pale);"/>
+    </svg>
+  </section>
+
+  <!-- ================= BOOKING ================= -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <div class="image-placeholder image-placeholder--landscape reveal">
+        <span>[фото: кабинет или пространство для консультаций]</span>
+      </div>
+
+      <div class="booking__inner">
+        <div class="booking__info reveal">
+          <p class="eyebrow">Запись на консультацию</p>
+          <h2 class="section-title">Сделать первый шаг — не значит решить всё сразу</h2>
+          <p class="booking__text">
+            Заполните короткую анкету — я отвечу в течение [1 рабочего дня] и мы
+            согласуем удобное время. Первая встреча — это знакомство, без каких-либо
+            обязательств продолжать.
+          </p>
+
+          <div class="alt-contact">
+            <p class="alt-contact__label">Или напишите напрямую</p>
+            <a href="https://vk.ru/oks200323" class="alt-contact__link" target="_blank" rel="noopener">
+              <span class="icon-badge" aria-hidden="true">VK</span>
+              ВКонтакте
+            </a>
+            <a href="tel:+79051909209" class="alt-contact__link">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 3h4l1.6 4-2 1.4a10 10 0 0 0 4.2 4.2l1.4-2 4 1.6v4c0 1-.9 1.8-1.9 1.7C8.6 17.4 2.6 11.4 2.3 4.9 2.2 3.9 3 3 4 3Z" stroke="#7FA6BE" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              +7 905 190-92-09
+            </a>
+          </div>
+        </div>
+
+        <div class="booking__form-wrap reveal">
+          <form class="form" id="bookingForm" action="https://formspree.io/f/mdaqynwa" method="POST" novalidate>
+
+            <input type="hidden" name="_subject" value="Новая заявка на консультацию с сайта">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form__field">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="Имя" autocomplete="name" placeholder="Как к вам обращаться">
+              <p class="form__error" data-error-for="name"></p>
+            </div>
+
+            <fieldset class="form__field">
+              <legend>Кому нужна консультация</legend>
+              <div class="radio-row">
+                <label class="radio-pill">
+                  <input type="radio" name="Кому нужна консультация" value="Взрослому" checked>
+                  Мне (взрослому)
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="Кому нужна консультация" value="Подростку (с согласия родителя)">
+                  Подростку (с согласия родителя)
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form__field">
+              <label for="contact">Телефон</label>
+              <input type="text" id="contact" name="Телефон" autocomplete="tel" placeholder="+7 ...">
+              <p class="form__error" data-error-for="contact"></p>
+            </div>
+
+            <div class="form__field">
+              <label for="time">Удобное время для связи</label>
+              <select id="time" name="Удобное время для связи">
+                <option value="Утро">Утро</option>
+                <option value="День">День</option>
+                <option value="Вечер">Вечер</option>
+                <option value="Не важно" selected>Не важно</option>
+              </select>
+            </div>
+
+            <div class="form__field">
+              <label for="message">Коротко о запросе</label>
+              <textarea id="message" name="Комментарий" rows="3" placeholder="Необязательно, но поможет подготовиться к встрече"></textarea>
+            </div>
+
+            <label class="checkbox-row">
+              <input type="checkbox" id="consent" name="Согласие на обработку данных" value="Да">
+              <span>Согласен(на) на обработку персональных данных на условиях, изложенных в <a href="documents/soglasie-na-obrabotku-pdn.pdf" target="_blank" rel="noopener">Согласии на обработку персональных данных</a></span>
+            </label>
+            <p class="form__error" data-error-for="consent"></p>
+
+            <p class="form__submit-error" id="formSubmitError" hidden>
+              Не получилось отправить заявку. Попробуйте ещё раз или позвоните по телефону +7 905 190-92-09.
+            </p>
+
+            <button type="submit" class="btn btn--primary btn--wide" id="formSubmitBtn">Отправить заявку</button>
+          </form>
+
+          <div class="form__success" id="formSuccess" hidden>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#7FA6BE" stroke-width="1.8"/><path d="M12 20.5l5.5 5.5L28 14" stroke="#7FA6BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Заявка отправлена</h3>
+            <p>Свяжусь с вами в течение [1 рабочего дня]. Если срочно — позвоните по телефону +7 905 190-92-09.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg class="divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,50 C300,10 560,90 840,45 C1120,5 1260,60 1440,30 L1440,100 L0,100 Z" style="fill: var(--color-bg);"/>
+    </svg>
+  </section>
+
+  <!-- ================= MATERIALS ================= -->
+  <section class="materials" id="materials">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Полезные материалы</p>
+        <h2 class="section-title">Чек-листы и памятки — бесплатно</h2>
+        <p class="section-subtitle">Можно скачать и использовать уже сейчас, даже если пока не готовы к встрече.</p>
+      </div>
+
+      <div class="materials__grid">
+        <article class="material-card reveal">
+          <div class="material-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="2.5" width="16" height="19" rx="1.6" stroke="#7FA6BE" stroke-width="1.5"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#7FA6BE" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Как понять, что подростку нужна поддержка</h3>
+          <p>Чек-лист признаков, на которые стоит обратить внимание.</p>
+          <button class="material-card__btn" data-material="checklist-teen" type="button">Скачать PDF</button>
+        </article>
+
+        <article class="material-card reveal">
+          <div class="material-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 0-7 3-7 7 0 5 4 8 7 10 3-2 7-5 7-10 0-4-3-7-7-7Z" stroke="#7FA6BE" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Что делать в моменте паники</h3>
+          <p>Короткая памятка, которую можно держать под рукой в телефоне.</p>
+          <button class="material-card__btn" data-material="panic-help" type="button">Скачать PDF</button>
+        </article>
+
+        <article class="material-card reveal">
+          <div class="material-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 18v-3a8 8 0 0 1 16 0v3" stroke="#7FA6BE" stroke-width="1.5" stroke-linecap="round"/><rect x="2.5" y="16" width="4" height="5" rx="1" stroke="#7FA6BE" stroke-width="1.5"/><rect x="17.5" y="16" width="4" height="5" rx="1" stroke="#7FA6BE" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Разговор с подростком: 5 фраз, которые помогают</h3>
+          <p>Памятка для родителей на сложные моменты.</p>
+          <button class="material-card__btn" data-material="parent-phrases" type="button">Скачать PDF</button>
+        </article>
+
+        <article class="material-card material-card--interactive reveal">
+          <div class="material-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4.5" y="4.5" width="15" height="15" rx="3" stroke="#7FA6BE" stroke-width="1.5"/><circle cx="4.5" cy="4.5" r="2.2" fill="#7FA6BE"/></svg>
+          </div>
+          <h3>Квадратное дыхание</h3>
+          <p>Попробовать прямо сейчас, не скачивая ничего.</p>
+          <a href="#breath" class="material-card__btn" data-scroll-to-breath>Попробовать</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="logo__text logo__text--footer">Оксана Капралова</span>
+      <p>Психолог для подростков и взрослых</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#booking">Запись на консультацию</a></li>
+        <li><a href="#materials">Полезные материалы</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+79051909209">+7 905 190-92-09</a></li>
+        <li><a href="mailto:capralovaoksi@yandex.ru">capralovaoksi@yandex.ru</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>Соцсети</h4>
+      <a href="https://vk.ru/oks200323" class="social-icon" aria-label="ВКонтакте" target="_blank" rel="noopener">VK</a>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© 2026 Оксана Капралова. Все права защищены.</p>
+    <div class="footer__legal-links">
+      <a href="documents/politika-obrabotki-pdn.pdf" target="_blank" rel="noopener">Политика обработки персональных данных</a>
+      <a href="documents/polzovatelskoe-soglashenie.pdf" target="_blank" rel="noopener">Пользовательское соглашение</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
