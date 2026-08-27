@@ -439,6 +439,14 @@ textarea:focus-visible {
   line-height: 1.5;
 }
 
+.lede {
+  margin: 0 0 28px;
+  max-width: 60ch;
+  font-size: 1.02rem;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
 .fact-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
 .fact-list li {
   display: flex;
@@ -452,6 +460,40 @@ textarea:focus-visible {
   font-weight: 700;
   color: var(--color-text);
 }
+
+.why-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.why-list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.96rem;
+  color: var(--color-text);
+}
+.why-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-sage);
+}
+
+.about__closing {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.08rem;
+  color: var(--color-text);
+  max-width: 55ch;
+  margin: 4px 0 32px;
+}
+.about__closing a {
+  color: var(--color-blue-deep);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.about__closing a:hover { color: var(--color-text); }
 
 .tags-label {
   font-weight: 700;
