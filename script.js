@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (!contactInput.value.trim()) {
-        setFieldError('contact', 'Укажите номер телефона, чтобы я могла(мог) ответить');
+        setFieldError('contact', 'Укажите номер телефона, чтобы я могла ответить');
         isValid = false;
         firstInvalid = firstInvalid || contactInput;
       } else {
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 6. Заглушка для кнопок «Скачать PDF» ---------- */
+  /* ---------- 6. Тост-уведомление (переиспользуемая утилита) ---------- */
   const toast = document.getElementById('toast');
   let toastTimeout = null;
 
@@ -264,13 +264,6 @@ document.addEventListener('DOMContentLoaded', () => {
     clearTimeout(toastTimeout);
     toastTimeout = setTimeout(() => toast.classList.remove('is-visible'), 2600);
   }
-
-  document.querySelectorAll('.material-card__btn[data-material]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      // Заменить на реальную ссылку на PDF, когда файлы будут готовы
-      showToast('Материал скоро будет доступен для скачивания');
-    });
-  });
 
   /* ---------- 7. Показать все теги специализации ---------- */
   const tagsToggle = document.getElementById('tagsToggle');

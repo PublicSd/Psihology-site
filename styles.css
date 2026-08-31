@@ -642,6 +642,7 @@ textarea:focus-visible {
   letter-spacing: 0.02em;
   flex-shrink: 0;
 }
+.icon-badge--max { font-size: 0.5rem; letter-spacing: 0; }
 
 .form {
   background: var(--color-card);
@@ -793,6 +794,7 @@ textarea:focus-visible {
 }
 .footer__col ul { display: flex; flex-direction: column; gap: 10px; font-size: 0.94rem; }
 .footer__col a:hover { color: var(--color-blue); }
+.footer__socials { display: flex; gap: 12px; }
 .social-icon {
   display: inline-flex;
   align-items: center;
