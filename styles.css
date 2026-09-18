@@ -11,13 +11,15 @@
   --color-card: #FFFFFF;
 
   --color-blue: #AFC9D9;
-  --color-blue-deep: #7FA6BE;
+  /* углублён с #7FA6BE: текст и кнопки должны держать 4.5:1 на всех фонах сайта */
+  --color-blue-deep: #466C84;
   --color-blue-pale: #E3EDF2;
 
   --color-sage: #B7C2AC;
 
   --color-text: #4B4038;
-  --color-text-soft: #8D8073;
+  /* углублён с #8D8073 ради того же контраста 4.5:1, тон прежний */
+  --color-text-soft: #6F6255;
   --color-border: #E4D9CB;
 
   --color-footer-bg: #33424B;
@@ -146,9 +148,9 @@ textarea:focus-visible {
 .btn--primary {
   background: var(--color-blue-deep);
   color: #fff;
-  box-shadow: 0 12px 28px -14px rgba(127, 166, 190, 0.75);
+  box-shadow: 0 12px 28px -14px rgba(70, 108, 132, 0.6);
 }
-.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 16px 32px -14px rgba(127, 166, 190, 0.85); }
+.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 16px 32px -14px rgba(70, 108, 132, 0.7); }
 .btn--ghost {
   background: transparent;
   color: var(--color-text);
@@ -231,13 +233,15 @@ textarea:focus-visible {
   content: "";
   position: absolute;
   left: 0; bottom: 0;
-  width: 0%;
+  width: 100%;
   height: 2px;
   background: var(--color-blue-deep);
-  transition: width var(--transition-base);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
 }
 .nav__link:hover::after,
-.nav__link.is-active::after { width: 100%; }
+.nav__link.is-active::after { transform: scaleX(1); }
 .nav__link.is-active { color: var(--color-blue-deep); }
 
 .header__actions { display: flex; align-items: center; gap: 14px; }
@@ -308,17 +312,10 @@ textarea:focus-visible {
   box-shadow: var(--shadow-soft);
   text-align: center;
 }
-.breath-card__eyebrow {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-text-soft);
-  margin-bottom: 6px;
-}
 .breath-card__title {
   font-size: 1.4rem;
   margin-bottom: 22px;
+  text-wrap: balance;
 }
 .breath-card__caption {
   margin-top: 18px;
@@ -637,21 +634,24 @@ textarea:focus-visible {
 .alt-contact__label { font-weight: 700; font-size: 0.88rem; color: var(--color-text-soft); }
 .alt-contact__link { display: flex; align-items: center; gap: 10px; font-weight: 700; }
 .alt-contact__link:hover { color: var(--color-blue-deep); }
+/* svg-иконки 20px получают поля до 28px, чтобы подписи стояли в одну колонку с бейджами */
+.alt-contact__link > svg { margin: 0 4px; flex-shrink: 0; }
 .icon-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: var(--color-blue-deep);
   color: #fff;
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  line-height: 1;
+  letter-spacing: 0;
   flex-shrink: 0;
 }
-.icon-badge--max { font-size: 0.5rem; letter-spacing: 0; }
+.icon-badge--max { font-size: 0.56rem; }
 
 .form {
   background: var(--color-card);
@@ -663,8 +663,12 @@ textarea:focus-visible {
   gap: 20px;
 }
 .form__field { display: flex; flex-direction: column; gap: 8px; }
-.form__field label,
-.form__field legend {
+/* сброс браузерной рамки группы полей: вид группы задают сами кнопки-«таблетки» */
+fieldset.form__field { border: 0; margin: 0; padding: 0; min-width: 0; }
+fieldset.form__field > legend { margin-bottom: 8px; }
+/* только прямые подписи полей: иначе padding: 0 перебивает отступы .radio-pill */
+.form__field > label,
+.form__field > legend {
   font-weight: 700;
   font-size: 0.92rem;
   padding: 0;
@@ -688,7 +692,7 @@ textarea:focus-visible {
 .form__error {
   min-height: 1.1em;
   font-size: 0.82rem;
-  color: #C05A47;
+  color: #A8452F;
   font-weight: 700;
 }
 .form__submit-error {
@@ -818,7 +822,8 @@ textarea:focus-visible {
   letter-spacing: 0.02em;
   transition: background var(--transition-base), color var(--transition-base);
 }
-.social-icon:hover { background: var(--color-blue); color: var(--color-footer-bg); }
+/* селектор усилен: иначе .footer__col a:hover красит текст в цвет фона и иконка исчезает */
+.footer__socials .social-icon:hover { background: var(--color-blue); color: var(--color-footer-bg); }
 
 .footer__bottom {
   display: flex;

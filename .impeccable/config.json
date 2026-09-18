@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-18T08:36:13.824Z",
+        "reason": "user confirmed: заказчик зафиксировал палитру («сохрани цветовую палитру», «цвета блока не меняй»); см. PRODUCT.md Brand Commitments"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-18T08:36:13.980Z",
+        "reason": "Agent: оба срабатывания намеренные — .breath__square: текст отцентрован в блоке 150px, точка по замыслу едет по рамке; .booking: снизу прижата волна-разделитель svg.divider, переход в следующую секцию"
+      }
+    ]
+  }
+}
