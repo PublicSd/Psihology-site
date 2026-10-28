@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const nameInput = bookingForm.querySelector('#name');
       const contactInput = bookingForm.querySelector('#contact');
+      const socialInput = bookingForm.querySelector('#social');
       const consentInput = bookingForm.querySelector('#consent');
 
       let isValid = true;
@@ -197,8 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setFieldError('name', '');
       }
 
-      if (!contactInput.value.trim()) {
-        setFieldError('contact', 'Укажите номер телефона, чтобы я могла ответить');
+      // достаточно одного способа связи: телефона или соцсети
+      if (!contactInput.value.trim() && !socialInput.value.trim()) {
+        setFieldError('contact', 'Укажите телефон или соцсеть, чтобы я могла ответить');
         isValid = false;
         firstInvalid = firstInvalid || contactInput;
       } else {
@@ -276,6 +278,32 @@ document.addEventListener('DOMContentLoaded', () => {
       extraTags.forEach((tag) => { tag.hidden = isExpanded; });
       tagsToggle.setAttribute('aria-expanded', String(!isExpanded));
       if (tagsToggleLabel) tagsToggleLabel.textContent = isExpanded ? 'Показать все темы' : 'Скрыть';
+    });
+  }
+
+  /* ---------- 8. Просмотр сканов дипломов ---------- */
+  // Без поддержки <dialog> ссылка просто откроет картинку в новой вкладке
+  const docViewer = document.getElementById('docViewer');
+  const docViewerImg = document.getElementById('docViewerImg');
+  const docViewerClose = document.getElementById('docViewerClose');
+
+  if (docViewer && typeof docViewer.showModal === 'function') {
+    document.querySelectorAll('[data-doc-open]').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const thumb = link.querySelector('img');
+        // в разметке скан ленивый, чтобы не грузиться заранее; при открытии — сразу
+        docViewerImg.loading = 'eager';
+        docViewerImg.src = link.getAttribute('href');
+        docViewerImg.alt = thumb ? thumb.alt : '';
+        docViewer.showModal();
+      });
+    });
+
+    docViewerClose.addEventListener('click', () => docViewer.close());
+    // клик по затемнению вокруг скана закрывает просмотр
+    docViewer.addEventListener('click', (e) => {
+      if (e.target === docViewer) docViewer.close();
     });
   }
 });

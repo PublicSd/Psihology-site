@@ -458,6 +458,67 @@ textarea:focus-visible {
   color: var(--color-text);
 }
 
+/* сканы дипломов: превью, по клику — полный размер в .doc-viewer */
+.docs-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 220px));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.doc-thumb {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-text-soft);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.doc-thumb img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-base);
+}
+.doc-thumb:hover img { transform: translateY(-3px); }
+.doc-thumb:hover .doc-thumb__caption { color: var(--color-blue-deep); }
+
+.doc-viewer {
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-card);
+  max-width: min(1100px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: hidden;
+}
+.doc-viewer::backdrop { background: rgba(40, 34, 30, 0.7); }
+.doc-viewer img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 32px);
+  object-fit: contain;
+}
+.doc-viewer__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--color-card);
+  color: var(--color-text);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .why-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
 .why-list li {
   position: relative;
@@ -535,11 +596,11 @@ textarea:focus-visible {
 }
 .services__note strong { color: var(--color-text); font-weight: 700; white-space: nowrap; }
 
-/* крупная карточка подростков слева на всю высоту, справа —
+/* две крупные карточки (дети, подростки) на всю высоту, справа —
    две карточки друг под другом, поровну делящие эту же высоту */
 .services__grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: stretch;
   gap: 22px;
 }
@@ -875,6 +936,8 @@ fieldset.form__field > legend { margin-bottom: 8px; }
 /* =============== АДАПТИВНОСТЬ =============== */
 @media (max-width: 1080px) {
   .materials__grid { grid-template-columns: repeat(2, 1fr); }
+  .services__grid { grid-template-columns: 1fr 1fr; }
+  .services__stack { grid-column: 1 / -1; flex-direction: row; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
 }
 
@@ -891,6 +954,7 @@ fieldset.form__field > legend { margin-bottom: 8px; }
   .about__inner { grid-template-columns: 1fr; gap: 40px; }
   .image-placeholder--portrait, .photo-frame { max-width: 320px; margin: 0 auto; }
   .services__grid { grid-template-columns: 1fr; }
+  .services__stack { flex-direction: column; }
   .booking__inner { grid-template-columns: 1fr; }
 }
 
